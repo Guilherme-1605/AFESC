@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo geral */
+body {
+    background: linear-gradient(to top, #0259a0, #0a35aa);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.back-button {
+    display: flex;
+    align-items: start;
+    font-size: 18px;
+    text-decoration: none;
+    color: #1E3A8A;
+    margin-top: 20px;
+}
+
+.arrow {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    color: #FF9800;
+}
+
+
+h1 {
+    font-size: 24px;
+}
+
+/* Input de busca */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Botões */
+button {
+    padding: 10px 10px;
+    background: #ff5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+   
+}
+
+button:hover {
+    background: #0259a0;
+}
+
+/* Lista de fóruns */
+#forumList {
+    
+    padding: 15px;
+}
+
+.forum-item {
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+/* Botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Área de comentários */
+.comments {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFESC - Rede Social do Estudante</title>
+    <link rel="stylesheet" href="css/inicial.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="titulo">
+                <h1>AFESC</h1>
+                <h3>A REDE SOCIAL DO ESTUDANTE</h3>
+            </div>
+        </header>
+        <nav>
+            <a href="biblioteca.html">Biblioteca Virtual</a>
+
+            <a href="perfil.html">Perfil</a>
+            <a href="forum.html">Fóruns</a>
+        </nav>
+        <div class="content">
+            <div class="main-content">
+                <div class="post-box">
+                    <input type="text" id="postInput" placeholder="No que você está pensando?">
+                    <button id="postButton">Publicar</button>
+                </div>
+                <div id="postList" class="post-list">
+                    <div class="post">
+                        <p><strong>Admin:</strong> Bem-vindo à AFESC! Compartilhe suas ideias e conecte-se com outros estudantes.</p>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <h3>Chats Recentes (Estudante)</h3>
+                <div class="chat-box">
+
+                    <div class="chat">
+                        <strong><a href="chat-aluno.html" class="chat" onclick="openChat('Maria')">Maria</a></strong><p>Olá, como vai?</p>
+                    </div>
+                    <div class="chat">
+                        <strong><a href="#" class="chat" onclick="openChat('João')">João</a></strong><p>Precisamos estudar para a prova.</p>
+                    </div>
+                    <div class="chat">
+                        <strong><a href="#" class="chat" onclick="openChat('Beltrano')">Beltrano</a></strong><p>Vamos revisar os exercícios?</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <img src="img/logo-sp.png" class="footer-logo">
+             <img src="img/afesc-logo.png" class="footer-logo">
+            <p >&copy; 2025 AFESC - Todos os direitos reservados</p>
+           
+        </footer>
+    </div>
+    <script src="js/inicial.js"></script>
+</body>
+</html>

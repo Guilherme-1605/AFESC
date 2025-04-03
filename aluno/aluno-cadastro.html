@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno - AFESC</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+<body>
+    <div class="page-container">
+        <main class="main-content">
+            <!-- Lado da imagem -->
+            <div class="image-side">
+                <div class="image-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Estudantes">
+                <div class="logo-text">AFESC</div>
+            </div>
+            
+            <!-- Lado do formulário -->
+            <div class="form-side">
+                <button class="back-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <div class="form-container">
+                    <div class="avatar-container">
+                        <svg viewBox="0 0 24 24" width="80" height="80">
+                            <path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 20c0-2.5 2-8 8-8s8 5.5 8 8"></path>
+                        </svg>
+                    </div>
+
+                    <form class="register-form">
+                        <h2>Cadastro de Aluno</h2>
+                        <p>Preencha os campos abaixo para criar sua conta</p>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="RA" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Usuário" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Idade" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Senha" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <span>Já possui cadastro? <a href="student-login.html" class="login-link">Login</a></span>
+                            <button type="submit" class="register-button"> <a href="pagina-inicial.html">Cadastrar</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <img src="../assets/logo-prefeitura.png" alt="Logo Prefeitura" class="footer-logo">
+                <img src="../assets/logo-afesc.png" alt="Logo AFESC" class="footer-logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estrutura da Página */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: #fff;
+    text-align: center;
+}
+
+/* Cabeçalho */
+.welcome-header {
+    margin-bottom: 20px;
+}
+
+.welcome-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Conteúdo */
+.welcome-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Opções de Usuário */
+.user-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.user-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.user-option:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Ícones */
+.user-icon svg {
+    fill: #fff;
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.footer-logo {
+    height: 100px;
+}
+
+
+

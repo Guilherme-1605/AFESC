@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Fóruns - AFESC</title>
+    <link rel="stylesheet" href="css/forum.css">
+</head>
+<body>
+    <header>
+        <h1>Fóruns de Discussão</h1>
+        <input type="text" id="search" placeholder="Busque uma matéria...">
+        <button id="createForumBtn">Criar Fórum</button>
+    </header>
+
+    <a href="pagina-inicial.html" class="back-button">
+        <span class="arrow">← Voltar à Página Inicial</span> 
+    </a>
+
+    <main id="forumList">
+        <!-- Lista de fóruns será gerada aqui via JavaScript -->
+    </main>
+
+    <div id="forumModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Criar Novo Fórum</h2>
+            <input type="text" id="forumTitle" placeholder="Título do Fórum">
+            <button id="submitForumBtn">Criar</button>
+        </div>
+    </div>
+
+    <script src="js/forum.js"></script>
+</body>
+</html>
