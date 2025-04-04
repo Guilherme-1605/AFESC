@@ -58,7 +58,7 @@ a{
     justify-content: center;
     align-items: center;
     right: 20px;
-    top: 60px;
+    left: 20px;
 }
 
 
@@ -113,18 +113,17 @@ a{
 }
 
 .avatar-container svg {
-    fill: #4682B4; /* Azul mais escuro */
+    fill: #4682B4;
 }
 
 /* 🔹 Formulário */
-.register-form {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* 🔹 Inputs */
-.register-form input {
+.login-form input {
     width: 100%;
     padding: 12px;
     border: 2px solid #ccc;
@@ -133,59 +132,27 @@ a{
     transition: all 0.3s ease-in-out;
 }
 
-.register-form input:focus {
+.login-form input:focus {
     border-color: #87CEFA;
     box-shadow: 0 0 8px rgba(135, 206, 250, 0.5);
     outline: none;
 }
 
+/* 🔹 Botão de Login */
 
-/* selecionar materia */
-.register-matter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#materia {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-#materia:focus {
-    border-color: #87CEFA;
-    box-shadow: 0 0 8px rgba(135, 206, 250, 0.5);
-    outline: none;
-}
-
-#materia option {
-    font-size: 16px;
-    padding: 10px;
-}
-
-
-/* 🔹 Botão de Cadastro */
-.register-button {
-    background: #4682B4;
+.login-button {
+    background-color: #4682B4;
     color: white;
-    padding: 12px;
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
-.register-button:hover {
-    background: #87CEFA;
-    transform: scale(1.05);
+.login-button:hover {
+    background-color: #87CEFA;
 }
 
 /* 🔹 Link de Login */
@@ -193,14 +160,14 @@ a{
     margin-top: 10px;
 }
 
-.login-link {
+.register-link {
     color: #4682B4;
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.login-link:hover {
+.register-link:hover {
     text-decoration: underline;
     color: #87CEFA;
 }
@@ -211,7 +178,7 @@ a{
     border: none;
     cursor: pointer;
     position: absolute;
-    left: 10px;
+    left: 30px;
     top: 10px;
 }
 
@@ -262,11 +229,11 @@ a{
         padding: 30px;
     }
 
-    .register-form input {
+    .login-form input {
         font-size: 14px;
     }
 
-    .register-button {
+    .login-button {
         font-size: 16px;
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Professor - AFESC</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
     <div class="page-container">
@@ -36,6 +36,11 @@
                         </svg>
                     </div>
 
+                    
+                    <form class="register-form">
+                        <h2>Cadastro do Professor</h2>
+                        <p>Preencha os campos abaixo para criar sua conta</p>
+
                     <!-- Formulário -->
                     <form class="register-form">
                         <div class="form-group">
@@ -57,17 +62,19 @@
 
 
                         <div class="form-group">
-                            <input type="email" placeholder="Email:">
+                            <input type="email" placeholder="Email:" required>
                         </div>
                         <div class="form-group">
                             <input type="password" placeholder="Senha:">
                         </div>
+
+
                         <div class="form-actions">
                             <div class="login-link-container">
                                 <span>Já possui cadastro?</span>
-                                <a href="teacher-login.html" class="login-link">Login</a>
+                                <a href="professor-login.html" class="login-link">Login</a>
                             </div>
-                            <button type="submit" class="register-button">Cadastrar</button>
+                            <button type="submit" class="register-button"><a href="pagina-inicial.html">Cadastrar</a></button>
                         </div>
                     </form>
                 </div>
