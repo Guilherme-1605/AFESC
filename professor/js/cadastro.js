@@ -54,4 +54,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Lista de matérias
+const materias = ["Matemática", "Português", "História", "Ciências", "Geografia"];
+
+// Pegando os elementos HTML
+const selectMateria = document.getElementById("materia");
+const resultado = document.getElementById("resultado");
+
+// Adicionando opções dinamicamente ao <select>
+materias.forEach(materia => {
+    let option = document.createElement("option");
+    option.value = materia;
+    option.textContent = materia;
+    selectMateria.appendChild(option);
+});
+
 
