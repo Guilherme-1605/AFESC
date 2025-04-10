@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Fóruns - AFESC</title>
+    <title>Fórum do Aluno</title>
     <link rel="stylesheet" href="css/forum.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Fóruns de Discussão</h1>
-        <input type="text" id="search" placeholder="Busque uma matéria...">
-        <button id="createForumBtn">Criar Fórum</button>
-    </header>
 
-    <a href="pagina-inicial.html" class="back-button">
-        <span class="arrow">← Voltar à Página Inicial</span> 
-    </a>
+<nav class="menu-lateral">
+    <h2>AFESC</h2>
+    <ul>
+        <li><a href="pagina-inicial.html">Início</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="chat-aluno.html">Chat</a></li>
+        <li><a href="forum.html" class="ativo">Fórum</a></li>
+    </ul>
+</nav>
 
-    <main id="forumList">
-        <!-- Lista de fóruns será gerada aqui via JavaScript -->
-    </main>
+<main class="conteudo">
+    <section class="topo">
+        <h1>Fórum do Aluno</h1>
+    </section>
 
-    <div id="forumModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Criar Novo Fórum</h2>
-            <input type="text" id="forumTitle" placeholder="Título do Fórum">
-            <button id="submitForumBtn">Criar</button>
-        </div>
-    </div>
+    <section class="novo-topico">
+        <h2>Criar Novo Tópico</h2>
+        <input type="text" id="tituloTopico" placeholder="Título do Tópico">
+        <textarea id="conteudoTopico" placeholder="Escreva sua mensagem..."></textarea>
+        <button onclick="criarTopico()">Publicar</button>
+    </section>
 
-    <script src="js/forum.js"></script>
+    <section class="lista-topicos" id="listaTopicos">
+        <!-- Tópicos inseridos via JS -->
+    </section>
+</main>
+
+<footer>
+    <img src="img/logo-sp.png" class="footer-logo">
+    <img src="img/afesc-logo.png" class="footer-logo">
+    <p>&copy; 2025 AFESC - Todos os direitos reservados</p>
+</footer>
+
+<script src="js/forum.js"></script>
 </body>
 </html>

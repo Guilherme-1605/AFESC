@@ -1,96 +1,59 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("postButton").addEventListener("click", handlePost);
+const postButton = document.getElementById('postButton');
+const postInput = document.getElementById('postInput');
+const postList = document.getElementById('postList');
+
+postButton.addEventListener('click', () => {
+    const text = postInput.value.trim();
+    if (text === '') return;
+
+    const post = document.createElement('div');
+    post.classList.add('post');
+    post.innerHTML = `
+        <p><strong>Você:</strong> ${text}</p>
+        <button class="like-btn">Curtir (<span class="like-count">0</span>)</button>
+        <button class="toggle-comments-btn">Comentários</button>
+
+        <div class="comments-section" style="display: none;">
+            <input type="text" class="comment-input" placeholder="Escreva um comentário">
+            <button class="comment-btn">Comentar</button>
+            <div class="comments-list"></div>
+        </div>
+    `;
+
+    postList.prepend(post);
+    postInput.value = '';
+
+    addPostEvents(post);
 });
 
-function handlePost() {
-    const postInput = document.getElementById("postInput");
-    const postText = postInput.value.trim();
-    if (postText !== "") {
-        createPost("Você", postText);
-        postInput.value = "";
-    } else {
-        alert("Por favor, insira uma mensagem.");
-    }
-}
+function addPostEvents(post) {
+    const likeBtn = post.querySelector('.like-btn');
+    const likeCount = post.querySelector('.like-count');
+    const toggleCommentsBtn = post.querySelector('.toggle-comments-btn');
+    const commentsSection = post.querySelector('.comments-section');
+    const commentBtn = post.querySelector('.comment-btn');
+    const commentInput = post.querySelector('.comment-input');
+    const commentsList = post.querySelector('.comments-list');
 
-function createPost(author, content) {
-    const postList = document.getElementById("postList");
-    const newPost = document.createElement("div");
-    newPost.classList.add("post");
-    
-    const postText = document.createElement("p");
-    postText.innerHTML = `<strong>${author}:</strong> ${content}`;
-    
-    const likeButton = document.createElement("button");
-    likeButton.classList.add("like-button");
-    likeButton.textContent = " ❤️";
-    likeButton.addEventListener("click", function() {
-        createHeartAnimation(newPost);
+    likeBtn.addEventListener('click', () => {
+        let count = parseInt(likeCount.textContent);
+        likeCount.textContent = count + 1;
     });
-    
-    const commentButton = document.createElement("button");
-    commentButton.classList.add("comment-button");
-    commentButton.textContent = " 💬";
-    commentButton.addEventListener("click", function() {
-        commentPost(newPost);
+
+    toggleCommentsBtn.addEventListener('click', () => {
+        commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
     });
-    
-    const commentsDiv = document.createElement("div");
-    commentsDiv.classList.add("comments");
-    
-    newPost.appendChild(postText);
-    newPost.appendChild(likeButton);
-    newPost.appendChild(commentButton);
-    newPost.appendChild(commentsDiv);
-    
-    postList.prepend(newPost);
+
+    commentBtn.addEventListener('click', () => {
+        const commentText = commentInput.value.trim();
+        if (commentText === '') return;
+
+        const comment = document.createElement('p');
+        comment.textContent = commentText;
+        commentsList.appendChild(comment);
+        commentInput.value = '';
+    });
 }
 
-function commentPost(postElement) {
-    let comment = prompt("Digite seu comentário:");
-    if (comment) {
-        let commentsDiv = postElement.querySelector(".comments");
-        let newComment = document.createElement("div");
-        newComment.classList.add("comment");
-        newComment.innerHTML = `${comment}`;
-        
-        const likeCommentButton = document.createElement("button");
-        likeCommentButton.classList.add("like-button");
-        likeCommentButton.textContent = "❤️";
-        likeCommentButton.addEventListener("click", function() {
-            createHeartAnimation(newComment);
-        });
-        
-        newComment.appendChild(likeCommentButton);
-        commentsDiv.appendChild(newComment);
-    }
-}
-
-function createHeartAnimation(postElement) {
-    const heart = document.createElement("div");
-    heart.classList.add("heart-animation");
-    heart.innerHTML = "❤️";
-    postElement.appendChild(heart);
-    
-    setTimeout(() => {
-        heart.style.transform = "translateY(-120px) scale(1.8)";
-        heart.style.opacity = "1";
-    }, 50);
-    
-    setTimeout(() => {
-        heart.style.opacity = "0.8";
-    }, 1500);
-    
-    setTimeout(() => {
-        heart.style.opacity = "0.5";
-    }, 2500);
-    
-    setTimeout(() => {
-        heart.style.opacity = "0";
-        heart.remove();
-    }, 3500);
-}
-
-function openChat(user) {
-    alert(`Abrindo chat com ${user}...`);
-}
+// Ativar eventos nos posts iniciais
+document.querySelectorAll('.post').forEach(addPostEvents);

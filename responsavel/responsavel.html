@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Responsável - AFESC</title>
+    <link rel="stylesheet" href="css/responsavel.css">
+</head>
+<body>
+    
+    <aside class="menu-lateral">
+        <h2>AFESC</h2>
+        <nav>
+            <a href="pagina-inicial.html">Início</a>
+            <a href="perfil.html">Perfil do Aluno</a>
+            <a href="forum.html">Fórum</a>
+            <a href="responsavel.html">Responsável</a>
+        </nav>
+    </aside>
+
+    <div class="conteudo">
+        <header>
+            <h1>Painel do Responsável</h1>
+        </header>
+
+        <main>
+            <section class="info-aluno">
+                <h2>Informações do Aluno</h2>
+                <div id="dados-aluno"></div>
+            </section>
+
+            <section class="posts-aluno">
+                <h2>Postagens do Aluno</h2>
+                <div id="postagens-aluno"></div>
+            </section>
+
+            <section class="livros-lidos">
+                <h2>Livros Lidos</h2>
+                <ul id="livros-aluno"></ul>
+            </section>
+
+            <section class="boletim-aluno">
+                <h2>Boletim Escolar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Matéria</th>
+                            <th>Média</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notas-aluno"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/responsavel.js"></script>
+</body>
+</html>

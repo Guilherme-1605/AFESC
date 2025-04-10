@@ -166,23 +166,20 @@ th, td {
 
 
 .plataformas {
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-around;
 }
 
-h3 {
+.plataformas h3 {
     font-size: 22px;
-    margin-bottom: 40px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .card-container {
     display: flex;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .card {
