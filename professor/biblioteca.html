@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Virtual</h1>
+        <input type="text" id="search" placeholder="Buscar livros...">
+    </header>
+    <main>
+        <aside>
+            <h2>Categorias</h2>
+            <ul>
+                <li onclick="filterBooks('ficcao')">Ficção</li>
+                <li onclick="filterBooks('nao-ficcao')">Não Ficção</li>
+                <li onclick="filterBooks('aventura')">Aventura</li>
+                <li onclick="filterBooks('romance')">Romance</li>
+                <li onclick="filterBooks('todos')">Todos</li>
+            </ul>
+        </aside>
+        <section id="book-list">
+            <!-- Livros serão inseridos aqui pelo JavaScript -->
+        </section>
+    </main>
+    <script src="js/biblioteca.js"></script>
+</body>
+</html>

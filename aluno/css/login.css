@@ -132,14 +132,13 @@ a{
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 125vh;
-    top: 50px;
+    left: 30px;
+    top: 30px;
 }
 
 .back-button svg {
     fill: #333;
     transition: 0.3s;
-   
 }
 
 .back-button:hover svg {

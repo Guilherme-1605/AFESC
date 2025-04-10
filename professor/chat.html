@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Aberto</title>
+    <link rel="stylesheet" href="css/chat-aberto.css">
+</head>
+<body>
+ 
+    <header>
+        <h1>AFESC</h1>
+        <p>A REDE SOCIAL DO ESTUDANTE</p>
+    </header>
+    
+    <nav>
+        <a href="pagina-inicial.html">Início</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="#" style="color: orange;">Mensagens</a>
+        <a href="forum.html">Fóruns</a>
+    </nav>
+
+    <div class="container">
+        <aside class="chat-list">
+            <h2>Alunos</h2>
+            <div class="chat-item" onclick="startChat('Aluno Vitor')">Aluno Vitor</div>
+            <div class="chat-item" onclick="startChat('Aluna Beatriz')">Aluna Beatriz</div>
+            <div class="chat-item" onclick="startChat('Aluna Patricia')">Aluna Patricia</div>
+        </aside>
+        
+        <div class="chat-container" id="chatContainer">
+            <!-- A conversa será gerada dinamicamente aqui -->
+        </div>
+    </div>
+            
+    
+
+    <script src="js/chat-aberto.js"></script>
+</body>
+</html>

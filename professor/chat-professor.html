@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat do Aluno</title>
+    <link rel="stylesheet" href="css/chat-prof.css">
+</head>
+<body>
+     <div class="container">
+        <!-- Barra Lateral -->
+        <div class="sidebar">
+            <h3>Outros Chats</h3>
+            <div class="chat-list">
+                <div>chat com professora Maria</div>
+                <div>Chat com professor João</div>
+                <div>Chat com professor Carlos</div>
+            </div>
+        </div>
+
+        <!-- Container do Chat -->
+        <div class="chat-container">
+            <div class="header-container">
+                <button class="back-button" onclick="goBack()"><a href="pagina-inicial.html">←</a></button>
+                <h2>Chat do professor</h2>
+            </div>
+
+            <div class="chat-box" id="chatBox">
+                <div class="message received">
+                    <span class="sender">Maria:</span>
+                    <p>Conseguiu aplicar a prova?</p>
+                </div>
+                <div class="message sent">
+                    <span class="sender">Você:</span>
+                    <p>Consegui sim !</p>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="messageInput" placeholder="Digite uma mensagem...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chat-prof.js"></script>
+</body>
+</html>
