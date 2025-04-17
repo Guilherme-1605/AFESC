@@ -31,8 +31,7 @@
                 <div id="postList" class="post-list">
                     <div class="post">
                         <p><strong>Admin:</strong> Bem-vindo à AFESC! Compartilhe suas ideias e conecte-se com outros estudantes.</p>
-                        <button class="like-btn">Curtir (<span class="like-count">0</span>)</button>
-                        <button class="toggle-comments-btn">Comentários</button>
+                        
 
                         <div class="comments-section" style="display: none;">
                             <input type="text" class="comment-input" placeholder="Escreva um comentário">
@@ -46,9 +45,15 @@
             <aside class="sidebar">
                 <h3>Chats Recentes (Estudante)</h3>
                 <div class="chat-box">
-                    <div class="chat"><strong><a href="chat-aluno.html">Maria</a></strong><p>Foi muito boa! O professor explicou bem</p></div>
-                    <div class="chat"><strong><a href="#">João</a></strong><p>Precisamos estudar para a prova.</p></div>
-                    <div class="chat"><strong><a href="#">Beltrano</a></strong><p>Vamos revisar os exercícios?</p></div>
+
+                    <div class="chat">
+                        <strong><a href="chat-professor.html" class="chat" onclick="openChat('Raissa')">Maria</a></strong><p>Foi muito boa! O professor explicou bem</p>
+                    </div>
+                    <div class="chat">
+                        <strong><a href="#" class="chat" onclick="openChat('Yago')">João</a></strong><p>Precisamos estudar para a prova.</p>
+                    </div>
+                    <div class="chat">
+                        <strong><a href="#" class="chat" onclick="openChat('Pedro')">Beltrano</a></strong><p>Vamos revisar os exercícios?</p>
                 </div>
             </aside>
         </div>

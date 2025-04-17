@@ -18,7 +18,7 @@ postButton.addEventListener('click', () => {
             <button class="comment-btn">Comentar</button>
             <div class="comments-list"></div>
         </div>
-    `;
+`;
 
     postList.prepend(post);
     postInput.value = '';
