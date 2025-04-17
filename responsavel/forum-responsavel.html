@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fóruns do Aluno - AFESC</title>
+    <link rel="stylesheet" href="css/forum-responsavel.css">
+</head>
+<body>
+    <aside class="menu-lateral">
+        <h2>AFESC</h2>
+        <nav>
+            <a href="responsavel.html">Início</a>
+            <a href="../aluno/perfil.html">Perfil do Aluno</a>
+            <a href="forum-responsavel.html">Fóruns do Aluno</a>
+            <a href="informações.html">Informações</a>
+        </nav>
+    </aside>
+
+    <div class="conteudo">
+        <header>
+            <h1>Fóruns Criados ou Participados pelo Aluno</h1>
+        </header>
+
+        <main>
+            <section class="forum-aluno">
+                <h2>Fóruns Criados</h2>
+                <div id="forums-criados">
+                    <!-- Fóruns criados vão aqui -->
+                </div>
+            </section>
+
+            <section class="forum-aluno">
+                <h2>Fóruns Participados</h2>
+                <div id="forums-participados">
+                    <!-- Fóruns participados vão aqui -->
+                </div>
+            </section>
+
+            
+        </main>
+    </div>
+
+    <script>
+        // Supondo que o aluno tenha as informações já armazenadas (no localStorage ou objeto)
+        const aluno = {
+            nome: "Lucas Silva",
+            idade: 16,
+            turma: "3º Ano B",
+            posts: [
+                "Estudando para a prova de matemática.",
+                "Acabei de ler um livro muito bom!",
+                "Participando do fórum de literatura."
+            ],
+            livros: [
+                "O Pequeno Príncipe",
+                "Dom Casmurro",
+                "A Revolução dos Bichos"
+            ],
+            notas: [
+                { materia: "Matemática", media: 8.5 },
+                { materia: "Português", media: 9.0 },
+                { materia: "História", media: 7.5 },
+                { materia: "Geografia", media: 8.0 }
+            ],
+            // Fóruns criados ou participados
+            forumsCriados: [
+                "Fórum sobre literatura",
+                "Fórum de matemática avançada"
+            ],
+            forumsParticipados: [
+                "Fórum de física",
+                "Fórum de história"
+            ]
+        };
+
+        // Exibindo os fóruns criados
+        const forumsCriadosDiv = document.getElementById('forums-criados');
+        if (aluno.forumsCriados.length > 0) {
+            aluno.forumsCriados.forEach(forum => {
+                forumsCriadosDiv.innerHTML += `<p class="forum-item forum-criado">${forum}</p>`;
+            });
+        } else {
+            forumsCriadosDiv.innerHTML = `<p>Este aluno ainda não criou nenhum fórum.</p>`;
+        }
+
+        // Exibindo os fóruns participados
+        const forumsParticipadosDiv = document.getElementById('forums-participados');
+        if (aluno.forumsParticipados.length > 0) {
+            aluno.forumsParticipados.forEach(forum => {
+                forumsParticipadosDiv.innerHTML += `<p class="forum-item forum-participado">${forum}</p>`;
+            });
+        } else {
+            forumsParticipadosDiv.innerHTML = `<p>Este aluno ainda não participou de nenhum fórum.</p>`;
+        }
+    </script>
+</body>
+</html>

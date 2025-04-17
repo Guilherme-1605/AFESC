@@ -77,7 +77,6 @@ nav a:hover {
     background: #03224d;
     color: #fff;
     padding: 20px;
-    
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
@@ -160,14 +159,12 @@ button:hover {
 .chat strong a{
     font-size: 16px;
     color: #374151;
-    margin-bottom: 3px;
-    margin-right: 50vh;
+    text-decoration: none;
    
 }
 
 .chat:hover a{
     background: #03224d;
-    width: 100px;
     color: white;
 }
 
@@ -178,14 +175,13 @@ footer {
     color: #1F2937;
     margin-top: 10px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    justify-content: space-between;
-    
 }
 
 
 .footer-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }

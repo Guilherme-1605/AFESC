@@ -11,10 +11,10 @@
     <aside class="menu-lateral">
         <h2>AFESC</h2>
         <nav>
-            <a href="pagina-inicial.html">Início</a>
-            <a href="perfil.html">Perfil do Aluno</a>
-            <a href="forum.html">Fórum</a>
-            <a href="responsavel.html">Responsável</a>
+            <a href="responsavel.html">Início</a>
+            <a href="../aluno/perfil.html">Perfil do Aluno</a>
+            <a href="forum-responsavel.html">Fóruns do Aluno</a>
+            <a href="informações.html">Informações</a>
         </nav>
     </aside>
 
@@ -51,6 +51,26 @@
                     <tbody id="notas-aluno"></tbody>
                 </table>
             </section>
+
+            <section class="editar-info">
+                <h2>Editar Informações do Aluno e Responsável</h2>
+                <form id="form-editar">
+                    <h3>Aluno</h3>
+                    <label>Nome: <input type="text" id="editar-nome" required></label><br><br>
+                    <label>Idade: <input type="number" id="editar-idade" required></label><br><br>
+                    <label>Turma: <input type="text" id="editar-turma" required></label><br><br>
+                    <label>Tipo Sanguíneo: <input type="text" id="editar-sangue"></label><br><br>
+                    <label>Alergias: <input type="text" id="editar-alergias"></label><br><br>
+            
+                    <h3>Responsável</h3>
+                    <label>Nome do Responsável: <input type="text" id="editar-responsavel-nome"></label><br><br>
+                    <label>Telefone: <input type="tel" id="editar-responsavel-telefone"></label><br><br>
+            
+                    <button type="submit">Salvar Alterações</button>
+                </form>
+            </section>
+            
+            
         </main>
     </div>
 

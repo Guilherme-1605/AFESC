@@ -142,16 +142,6 @@ a{
     margin: 5px 0;
 }
 
-.notas {
-    margin-top: 30px;
-   
-}
-
-.notas h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -166,20 +156,23 @@ th, td {
 
 
 .plataformas {
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
 }
 
-.plataformas h3 {
+h3 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .card-container {
     display: flex;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .card {
