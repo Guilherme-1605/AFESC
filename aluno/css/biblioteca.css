@@ -10,23 +10,6 @@ body {
     justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
-.back-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-left: 20px;
-    display: flex;
-    justify-content: flex-start;
-   
-}
-
 header {
     width: 100%;
     background: #1E3A8A;
@@ -59,6 +42,20 @@ aside {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow{
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
 }
 
 aside ul {

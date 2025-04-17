@@ -16,7 +16,6 @@ function criarTopico() {
         <h3>${titulo}</h3>
         <p>${conteudo}</p>
         <div class="botoes-topico">
-            <button onclick="curtirTopico(this)">Curtir (<span class="like-count">0</span>)</button>
             <button onclick="mostrarRespostas(this)">Comentários (<span class="resposta-count">0</span>)</button>
         </div>
         <div class="respostas">

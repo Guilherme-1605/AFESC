@@ -10,6 +10,7 @@
     <header>
         <h1>Biblioteca Virtual</h1>
         <input type="text" id="search" placeholder="Buscar livros...">
+        <button id="add-book-btn">Adicionar Livro</button>
     </header>
     <main>
         <aside>
@@ -26,6 +27,25 @@
             <!-- Livros serão inseridos aqui pelo JavaScript -->
         </section>
     </main>
+
+    <!-- Formulário para Adicionar/Editar Livro -->
+    <div id="book-form-container" style="display:none;">
+        <form id="book-form">
+            <h2>Adicionar/Atualizar Livro</h2>
+            <input type="text" id="book-image" placeholder="URL da imagem" required>
+            <input type="text" id="book-title" placeholder="Título do livro" required>
+            <input type="text" id="book-description" placeholder="Descrição do livro" required>
+            <select id="book-category" required>
+                <option value="" disabled selected>Escolha a categoria</option>
+                <option value="ficcao">Ficção</option>
+                <option value="nao-ficcao">Não Ficção</option>
+                <option value="aventura">Aventura</option>
+                <option value="romance">Romance</option>
+            </select>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
     <script src="js/biblioteca.js"></script>
 </body>
 </html>

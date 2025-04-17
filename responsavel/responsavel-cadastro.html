@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do Responsável - AFESC</title>
+  <link rel="stylesheet" href="css/responsavel.css">
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #03224d;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-container button {
+      width: 100%;
+      background: #03224d;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #174b85;
+    }
+    .form-container p {
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro do Responsável</h2>
+    <form id="form-cadastro">
+      <input type="text" id="rg" placeholder="RG" maxlength="20" required>
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <input type="tel" id="telefone" placeholder="Telefone" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+      <p>Já possui conta? <a href="responsavel-login.html">Entrar</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Função para salvar os dados do responsável
+    document.getElementById('form-cadastro').addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede o envio do formulário padrão
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const senha = document.getElementById('senha').value;
+      const rg = document.getElementById('rg').value;
+
+      // Verificando se já existe um responsável cadastrado com o mesmo RG
+      let responsaveis = JSON.parse(localStorage.getItem('responsaveis')) || [];
+      const rgExistente = responsaveis.find(responsavel => responsavel.rg === rg);
+
+      if (rgExistente) {
+        alert('Já existe um responsável cadastrado com esse RG!');
+        return;
+      }
+
+      // Criando um objeto com os dados do responsável
+      const novoResponsavel = {
+        nome,
+        email,
+        telefone,
+        senha,
+        rg
+      };
+
+      // Salvando o novo responsável no localStorage
+      responsaveis.push(novoResponsavel);
+      localStorage.setItem('responsaveis', JSON.stringify(responsaveis));
+
+      alert('Cadastro realizado com sucesso!');
+      window.location.href = "responsavel-login.html"; // Redireciona para a página de login
+    });
+  </script>
+</body>
+</html>
